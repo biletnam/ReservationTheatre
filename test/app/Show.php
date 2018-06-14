@@ -57,6 +57,12 @@ class Show extends Eloquent
 					->withPivot('id');
 	}
 
+	public function category(){
+
+	    return $this->belongsto(\App\Category::class);
+
+    }
+
 	public function representations()
 	{
 		return $this->hasMany(\App\Representation::class);

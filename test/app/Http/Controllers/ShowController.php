@@ -8,6 +8,7 @@ use App\Repositories\ShowRepository;
 use App\Repositories\LocationRepository;
 
 use App\Representation;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\File;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Storage;
@@ -54,9 +55,9 @@ class ShowController extends Controller
             }
 
             app()->setLocale(session('locale'));
+        //$shows=DB::table('Shows')->with('category')->paginate(4);
+        $shows = \App\Show::with('category')->paginate();
 
-
-        $shows = $this->showRepository->getShows(4);
         $links = $shows->render();
         return view('show', compact('shows', 'links'));
 

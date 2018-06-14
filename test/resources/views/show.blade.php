@@ -96,6 +96,8 @@
 
                 </div>
 
+                <div class="card-info">{{$show->category->name}}</div>
+
                 <div>
                     @auth
                 @if($show->bookable==1)
