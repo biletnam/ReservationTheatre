@@ -159,11 +159,8 @@
                             url: 'http://localhost:8000/shows',
                             data: ({Imgname:results}),
                             success: function (data) {
-                                console.log(results);
-                                $('a').addClass('hidden');
                             },
                             error: function (data, textStatus, errorThrown) {
-                                console.log("merde");
 
                             },
                         });                    }
