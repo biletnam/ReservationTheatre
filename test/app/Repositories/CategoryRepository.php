@@ -6,7 +6,7 @@ use OzanAkman\RepositoryGenerator\Repository;
 use App\Show;
 use App\Repositories\Interfaces\ShowRepositoryInterface;
 
-class ShowRepository extends Repository implements ShowRepositoryInterface
+class CategoryRepository extends Repository implements ShowRepositoryInterface
 {
 
     public $model;
@@ -34,7 +34,7 @@ class ShowRepository extends Repository implements ShowRepositoryInterface
     }
     public function getByIdWith($id)
     {
-        return \App\Show::with('location','representations')->where("id",$id)->get()->first();
+        return \App\Category::with('show')->where("id",$id)->get()->first();
 
     }
 
@@ -48,6 +48,10 @@ class ShowRepository extends Repository implements ShowRepositoryInterface
 
     }
 
+
+    public function getCategory(){
+        return \App\Category::with('show')->get()->all();
+    }
 
     public function getCategories($n)
     {

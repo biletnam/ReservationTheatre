@@ -40,5 +40,9 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+Route::get('/category','CategoryController@index')->name('category');
+
+Route::get('/category/{id}','CategoryController@categorieUnique')->name('catUnique');
+
 
 Route::get('book/{id}','ShowController@book')->name('book');

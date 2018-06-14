@@ -43,7 +43,8 @@ class Show extends Eloquent
 		'poster_url',
 		'location_id',
 		'bookable',
-		'price'
+		'price',
+        'category_id'
 	];
 
 	public function location()

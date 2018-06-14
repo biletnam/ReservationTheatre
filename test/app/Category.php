@@ -30,6 +30,11 @@ class Category extends Eloquent
         'id' => 'int'
     ];
 
+    public   $rules = [
+        'name' => 'max:10',
+    ];
+
+
     protected $fillable = [
         'nom'
     ];

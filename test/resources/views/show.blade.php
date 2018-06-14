@@ -22,6 +22,7 @@
 
     <div class="btn-group pull-left">
 
+        <button id='btnAddProfile' onclick="change()">Detail</button>
 
 
     </div>
@@ -161,8 +162,16 @@
                             url: 'http://localhost:8000/shows',
                             data: ({Imgname:results}),
                             success: function (data) {
+                                {
+                                    $("#btn1").html('Save');
+
+                                }
+
                             },
                             error: function (data, textStatus, errorThrown) {
+                                {
+                                 $("#btn1").html==='save' ;
+                                }
 
                             },
                         });                    }
@@ -173,6 +182,16 @@
 
 
 
+    </script>
+
+    <script>
+        function change()
+        {
+
+            $("#btnAddProfile").html('Save');
+
+
+        }
     </script>
 
 
