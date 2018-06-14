@@ -37,6 +37,7 @@ class Show extends Eloquent
 	];
 
 	protected $fillable = [
+	    'id',
 		'slug',
 		'title',
 		'poster_url',
@@ -47,17 +48,17 @@ class Show extends Eloquent
 
 	public function location()
 	{
-		return $this->belongsTo(\App\Models\Location::class);
+		return $this->belongsTo(\App\Location::class);
 	}
 
 	public function artiste_types()
 	{
-		return $this->belongsToMany(\App\Models\ArtisteType::class)
+		return $this->belongsToMany(\App\ArtisteType::class)
 					->withPivot('id');
 	}
 
 	public function representations()
 	{
-		return $this->hasMany(\App\Models\Representation::class);
+		return $this->hasMany(\App\Representation::class);
 	}
 }

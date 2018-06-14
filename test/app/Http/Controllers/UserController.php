@@ -75,7 +75,10 @@ class UserController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = $this->user->all()->where("id",$id);
+        return response()->json(['data' => $user,
+            'status' => Response::HTTP_OK]);
+
     }
 
     /**
@@ -125,4 +128,7 @@ class UserController extends Controller
 
         return response()->json(['status' => Response::HTTP_OK]);
     }
+
+
+
 }

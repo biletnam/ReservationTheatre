@@ -11,4 +11,13 @@ class LocationRepository extends Repository implements LocationRepositoryInterfa
     {
         parent::__construct($model);
     }
+
+    public function getLocationBySlug($slug)
+    {
+        //  return Produit::all()->where("catégorie","info");
+        return \App\location::with('locality')->where("slug",$slug)->get()->all();
+
+        //$retour = DB::table('locations')->where("slug", $slug);
+
+    }
 }

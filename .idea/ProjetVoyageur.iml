@@ -20,6 +20,8 @@
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/fideloper/proxy" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/filp/whoops" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/fzaninotto/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/test/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/test/vendor/guzzlehttp/promises" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/guzzlehttp/psr7" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/hamcrest/hamcrest-php" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/illuminate/html" />
@@ -33,9 +35,15 @@
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/laravel/framework" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/laravel/tinker" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/laravelcollective/html" />
+      <excludeFolder url="file://$MODULE_DIR$/test/vendor/league/csv" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/test/vendor/mnapoli/front-yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/test/vendor/mnapoli/silly" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/mockery/mockery" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/test/vendor/mpociot/documentarian" />
+      <excludeFolder url="file://$MODULE_DIR$/test/vendor/mpociot/laravel-apidoc-generator" />
+      <excludeFolder url="file://$MODULE_DIR$/test/vendor/mpociot/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/mtdowling/cron-expression" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/myclabs/deep-copy" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/nesbot/carbon" />
@@ -44,6 +52,7 @@
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/paragonie/random_compat" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/phar-io/manifest" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/test/vendor/php-di/invoker" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/phpdocumentor/reflection-common" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/phpdocumentor/reflection-docblock" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/phpdocumentor/type-resolver" />
@@ -76,6 +85,7 @@
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/seld/cli-prompt" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/seld/jsonlint" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/seld/phar-utils" />
+      <excludeFolder url="file://$MODULE_DIR$/test/vendor/spatie/laravel-cors" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/swiftmailer/swiftmailer" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/symfony/console" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/symfony/css-selector" />
@@ -93,11 +103,15 @@
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/symfony/thanks" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/symfony/translation" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/test/vendor/symfony/yaml" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/tcg/voyager" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/theseer/tokenizer" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/test/vendor/usmanhalalit/laracsv" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/vlucas/phpdotenv" />
       <excludeFolder url="file://$MODULE_DIR$/test/vendor/webmozart/assert" />
+      <excludeFolder url="file://$MODULE_DIR$/test/vendor/windwalker/renderer" />
+      <excludeFolder url="file://$MODULE_DIR$/test/vendor/windwalker/structure" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

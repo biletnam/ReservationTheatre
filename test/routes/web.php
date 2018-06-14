@@ -26,11 +26,19 @@ Route::resource('users', 'UserController');
 
 Route::resource('artists', 'ArtistController');
 
-Route::resource('shows', 'ShowController');
 
+Route::post('queries', 'QueryController@search')->name('queries.search');
+
+Route::post('export','ShowController@export')->name('showExport');
+Route::post('import','ShowController@import')->name('showImport');
+
+Route::get('shows/{id}','ShowController@ShowID')->name('showID');
+Route::post('shows','ShowController@post')->name("showPost");
 
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+Route::get('book/{id}','ShowController@book')->name('book');

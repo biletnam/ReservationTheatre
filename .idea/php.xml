@@ -96,6 +96,20 @@
       <path value="$PROJECT_DIR$/test/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/test/vendor/seld/phar-utils" />
       <path value="$PROJECT_DIR$/test/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/test/vendor/windwalker/renderer" />
+      <path value="$PROJECT_DIR$/test/vendor/windwalker/structure" />
+      <path value="$PROJECT_DIR$/test/vendor/mpociot/documentarian" />
+      <path value="$PROJECT_DIR$/test/vendor/mpociot/laravel-apidoc-generator" />
+      <path value="$PROJECT_DIR$/test/vendor/mnapoli/front-yaml" />
+      <path value="$PROJECT_DIR$/test/vendor/mpociot/reflection-docblock" />
+      <path value="$PROJECT_DIR$/test/vendor/php-di/invoker" />
+      <path value="$PROJECT_DIR$/test/vendor/mnapoli/silly" />
+      <path value="$PROJECT_DIR$/test/vendor/symfony/yaml" />
+      <path value="$PROJECT_DIR$/test/vendor/usmanhalalit/laracsv" />
+      <path value="$PROJECT_DIR$/test/vendor/league/csv" />
+      <path value="$PROJECT_DIR$/test/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/test/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/test/vendor/spatie/laravel-cors" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7" />

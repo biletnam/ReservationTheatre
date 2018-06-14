@@ -1,6 +1,6 @@
 @extends('template')
 @section('titre')
-    Les articles
+    <title>{{ trans('show.titre') }}</title>
 @endsection
 <style>
     #display-on-click
@@ -10,9 +10,12 @@
     }
 </style>
 @section('header')
-    <div class="row">
+    @if (auth()->check())
 
-        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+        <div class="row">
+
+        <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">    {{ trans('show.logout') }}
+        </a>
 
         <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
             </div>
@@ -23,12 +26,47 @@
 
     </div>
 
+@endif
+    <button id="btn1">Use External API(Desactivate Cross on nav)</button>
 
     <div class="navbar navbar-dark bg-dark box-shadow">
         <div class="container d-flex justify-content-between">
+            {!! Form::open(array('route' => 'queries.search', 'class'=>'form navbar-form navbar-right searchform')) !!}
+            {!! Form::text('search', null,
+                                   array('required',
+                                        'class'=>'form-control',
+                                        'placeholder'=>trans('Show.searchBar'))) !!}
+            {!! Form::submit(trans('Show.search'),array('class'=>'btn btn-default')) !!}
+            {!! Form::close() !!}
 
         </div>
     </div>
+
+@auth
+    @if(\Illuminate\Support\Facades\Auth::User()->role->name =="admin")
+        <div class="row btn-info btn">
+
+        <a href="{{ route('showExport') }}" onclick="event.preventDefault(); document.getElementById('export-form').submit();">    {{ trans('show.export') }}
+        </a>
+
+        <form id="export-form" action="{{ route('showExport') }}" method="POST" style="display: none;">{{ csrf_field() }}</form>
+    </div>
+<br/>
+    <br/>
+<div class="row btn-add-new btn btn-info" >
+    {{ trans('show.import') }}
+
+    <form action="{{ route('showImport') }}" method="POST" enctype="multipart/form-data">
+        {{ csrf_field() }}
+        <input type="file" name="importShows" />
+        <br /><br />
+        <input class="btn-info" type="submit" value="     {{ trans('show.save') }}
+                " />
+    </form>
+</div>
+@endif
+@endauth
+
 @endsection
 
 @section('contenu')
@@ -38,10 +76,6 @@
     <main role="main">
         {!! $links !!}
         <div class="container">
-
-
-
-
         <?php  $i=0 ?>
 
 
@@ -63,11 +97,14 @@
                 </div>
 
                 <div>
+                    @auth
                 @if($show->bookable==1)
-                <div class="btn btn-info">Book </div>
+
+                <a class="btn btn-info" href="{{ route('showID',$show->id) }}" >  {{ trans('show.book') }}
+                </a>
                     @endif
                 </div>
-
+@endauth
 
 
             </div>
@@ -106,14 +143,45 @@
     <script src="../../assets/js/vendor/popper.min.js"></script>
     <script src="../../dist/js/bootstrap.min.js"></script>
     <script src="../../assets/js/vendor/holder.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" crossorigin="anonymous">
+        </script>
+    <script>
+        $(document).ready(function(){
+            $("#btn1").click(function() {
+
+
+                $.ajax({
+                    url: "https://api.theatredelaville-paris.com/events",
+                    dataType: 'json',
+                    success: function(results){
+                        $.ajax({
+                            type: "POST",
+                            url: 'http://localhost:8000/shows',
+                            data: ({Imgname:results}),
+                            success: function (data) {
+                                console.log(results);
+                                $('a').addClass('hidden');
+                            },
+                            error: function (data, textStatus, errorThrown) {
+                                console.log("merde");
+
+                            },
+                        });                    }
+                });
+
+            });
+        });
+
+
+
+    </script>
+
+
+
+
+
     </body>
     </html>
 
 @endsection
-<script>
-    function myFunction() {
 
-        document.getElementById('display-on-click').style.display = 'block';
-    }
-
-</script>
